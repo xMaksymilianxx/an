@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Analysis Pro</title>
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/themes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar">
+                <div class="logo">Football Analysis Pro</div>
+                <div class="controls">
+                    <select id="themeSelect" class="theme-selector">
+                        <option value="light">Jasny motyw</option>
+                        <option value="dark">Ciemny motyw</option>
+                        <option value="blue">Niebieski motyw</option>
+                        <option value="green">Zielony motyw</option>
+                    </select>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="analysis-panel">
+                <div class="date-picker">
+                    <label for="matchDate">Wybierz datę:</label>
+                    <input type="date" id="matchDate">
+                </div>
+
+                <div class="filters">
+                    <div class="league-select">
+                        <label for="leagueSelect">Liga:</label>
+                        <select id="leagueSelect"></select>
+                    </div>
+                    <div class="match-select">
+                        <label for="matchSelect">Mecz:</label>
+                        <select id="matchSelect"></select>
+                    </div>
+                </div>
+
+                <div class="analysis-container">
+                    <div class="weather-info" id="weatherInfo"></div>
+                    <div class="team-stats" id="teamStats"></div>
+                    <div class="predictions" id="predictions"></div>
+                </div>
+
+                <div class="historical-data">
+                    <h3>Historia analiz</h3>
+                    <div id="analysisHistory"></div>
+                </div>
+
+                <div class="learning-metrics">
+                    <h3>Skuteczność systemu</h3>
+                    <div id="accuracyMetrics"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Football Analysis Pro - System analizy sportowej</p>
+        </footer>
+    </div>
+
+    <script src="src/js/api.js"></script>
+    <script src="src/js/analysis.js"></script>
+    <script src="src/js/learning.js"></script>
+    <script src="src/js/interface.js"></script>
+</body>
+</html>
